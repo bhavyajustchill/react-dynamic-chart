@@ -49,7 +49,7 @@ export default function DynamicPieChart(props) {
           </div>
         </div>
         <div className="card-body d-flex align-items-center justify-content-center">
-          <a href={pdfUrl} target="_blank">
+          <a rel="noreferrer" href={pdfUrl} target="_blank">
             <Chart
               height="250px"
               width="250px"
