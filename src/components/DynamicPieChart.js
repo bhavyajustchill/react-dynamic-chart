@@ -41,12 +41,12 @@ export default function DynamicPieChart(props) {
   ]);
 
   return (
-    <div className="d-flex justify-content-center">
-      <div className="card" style={{ width: "fit-content" }}>
-        <div className="card-header">
-          <h4 className="text-decoration-underline text-bold text-center">
-            Consolidated Placement Details {year}
-          </h4>
+    <div className="d-flex justify-content-center my-3">
+      <div className="card" style={{ width: "80%" }}>
+        <div className="card-header d-flex justify-content-center align-items-center">
+          <div>
+            <h4 className="mb-0"> Academic Year: {year}</h4>
+          </div>
         </div>
         <div className="card-body d-flex align-items-center justify-content-center">
           <a href={pdfUrl} target="_blank">
@@ -59,8 +59,10 @@ export default function DynamicPieChart(props) {
             />
           </a>
         </div>
-        <div className="card-footer">
-          <h4 className="text-bold text-center">Program : {program}</h4>
+        <div className="card-footer d-flex justify-content-center align-items-center">
+          <div>
+            <h4 className="mb-0">Program: {program}</h4>
+          </div>
         </div>
       </div>
     </div>

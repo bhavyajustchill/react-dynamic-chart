@@ -131,9 +131,11 @@ function App() {
     <>
       <div className="container-fluid">
         <div className="row d-flex align-items-center justify-content-center me-0">
-          <h3 className="display-3 text-center my-5">Placement Data with Dynamic Pie Chart</h3>
+          <h5 className="display-5 text-decoration-underline text-center my-5">
+            Consolidate Placement Details with Dynamic Pie Chart
+          </h5>
           <PrimeReactProvider>
-            {sampleChartData.map((data, index) => {
+            {sampleChartData.map((data) => {
               return (
                 <>
                   <div className="my-2 col-md-4 mx-0">
