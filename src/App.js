@@ -139,22 +139,20 @@ function App() {
             Consolidate Placement Details with Dynamic Pie Chart
           </h5>
           <PrimeReactProvider>
-            {sampleChartData.map((data) => {
+            {sampleChartData.map((data, index) => {
               return (
-                <>
-                  <div className="my-2 col-md-4 mx-0">
-                    <DynamicPieChart
-                      columns={data.columns}
-                      row={data.row}
-                      backgroundColor={data.backgroundColor}
-                      hoverBackgroundColor={data.hoverBackgroundColor}
-                      pointStyle={true}
-                      year={data.year}
-                      pdfUrl={data.pdfUrl}
-                      program={data.program}
-                    />
-                  </div>
-                </>
+                <div key={index} className="my-2 col-md-4 mx-0">
+                  <DynamicPieChart
+                    columns={data.columns}
+                    row={data.row}
+                    backgroundColor={data.backgroundColor}
+                    hoverBackgroundColor={data.hoverBackgroundColor}
+                    pointStyle={true}
+                    year={data.year}
+                    pdfUrl={data.pdfUrl}
+                    program={data.program}
+                  />
+                </div>
               );
             })}
           </PrimeReactProvider>

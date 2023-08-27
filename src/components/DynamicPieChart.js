@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Chart } from "primereact/chart";
 
 export default function DynamicPieChart(props) {
-  const { program, year, columns, row, backgroundColor, hoverBackgroundColor, pdfUrl } = props;
+  const { program, year, columns, row, backgroundColor, hoverBackgroundColor, pdfUrl, pointStyle } =
+    props;
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
 
@@ -21,7 +22,7 @@ export default function DynamicPieChart(props) {
       plugins: {
         legend: {
           labels: {
-            usePointStyle: props.pointStyle,
+            usePointStyle: pointStyle,
           },
         },
       },
@@ -29,16 +30,7 @@ export default function DynamicPieChart(props) {
 
     setChartData(data);
     setChartOptions(options);
-  }, [
-    program,
-    year,
-    columns,
-    row,
-    backgroundColor,
-    hoverBackgroundColor,
-    pdfUrl,
-    props.pointStyle,
-  ]);
+  }, [program, year, columns, row, backgroundColor, hoverBackgroundColor, pdfUrl, pointStyle]);
 
   return (
     <div className="d-flex justify-content-center my-3">
